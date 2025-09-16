@@ -1,0 +1,11 @@
+services:
+  bot:
+    container_name: KazBot_PriceWizard_v1
+    build: .
+    command: python run.py
+    restart: always
+    volumes:
+      - ./base.db:/app/base.db
+      - ./py_log.log:/app/py_log.log
+
+       
